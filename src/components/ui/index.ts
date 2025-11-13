@@ -3,7 +3,8 @@ export {
     DecrementIcon, 
     IncrementIcon, 
     CarbonNeutralIcon,
-    EmptyCartIcon
+    EmptyCartIcon,
+    OrderConfirmedIcon,
 } from './Icon'
 
 export { 
@@ -14,5 +15,6 @@ export {
     IconButton,
     RemoveBtn,
     BaseButton,
-    ConfirmOrderBtn
+    ConfirmOrderBtn,
+    StartNewOrderBtn
 } from './Button'

@@ -22,3 +22,7 @@
 body {
     @apply font-Red-Hat-Text font-semibold bg-Rose-50;
 }
+
+.scroll-style {
+    scrollbar-width: thin;
+}
