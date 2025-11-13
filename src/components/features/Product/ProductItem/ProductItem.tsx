@@ -9,13 +9,13 @@ export function ProductItem() {
       <section className="aspect-4/4 rounded-lg overflow-auto">
         <img className="w-full h-full" src="/images/image-baklava-desktop.jpg" alt="product-image"/>
       </section>
-      <div className="absolute bottom-18 w-full flex justify-center">
+      <section className="absolute bottom-18 w-full flex justify-center">
         {
           active
           ? <ProductCartBtn/>
           : <QuantitySelector/>
         }
-      </div>
+      </section>
       <section>
         <span className="text-Rose-400 text-xs font-normal">Baklava</span>
         <h1 className="text-Rose-900">Pistachio Baklava</h1>

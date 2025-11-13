@@ -8,6 +8,7 @@
 
 @theme {
     --color-Red: hsl(14, 86%, 42%);
+    --color-Red-800: hsl(14, 85%, 28%);
     --color-Green: hsl(159, 69%, 38%);
     --color-Rose-50: hsl(20, 50%, 98%);
     --color-Rose-100: hsl(13, 31%, 94%);
@@ -19,5 +20,5 @@
 }
 
 body {
-    @apply font-Red-Hat-Text font-semibold bg-Rose-50
+    @apply font-Red-Hat-Text font-semibold bg-Rose-50;
 }

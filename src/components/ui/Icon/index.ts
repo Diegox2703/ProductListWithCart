@@ -1,3 +1,6 @@
 export { CartIcon } from './CartIcon'
 export { IncrementIcon } from './IncrementIcon'
 export { DecrementIcon } from './DecrementIcon'
+export { RemoveIcon } from './RemoveIcon'
+export { CarbonNeutralIcon } from './CarbonNeutralIcon'
+export { EmptyCartIcon } from './EmptyCartIcon'

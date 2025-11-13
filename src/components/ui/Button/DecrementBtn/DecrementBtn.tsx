@@ -1,10 +1,10 @@
 import { DecrementIcon } from '../../Icon'
-import { QuantityBtn } from '../QuantityBtn'
+import { IconButton } from '../IconButton'
 
 export function DecrementBtn() {
   return (
-    <QuantityBtn>
+    <IconButton>
       <DecrementIcon/>
-    </QuantityBtn>
+    </IconButton>
   )
 }
