@@ -1,0 +1,1 @@
+export { cartAdapter } from './cartAdapter'

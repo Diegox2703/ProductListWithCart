@@ -2,11 +2,20 @@ import type { CartItemProps } from './cart-item.types'
 import { CartDetails } from '../CartDetails/CartDetails'
 import { CartActionBtn } from '../CartActionBtn/CartActionBtn'
 
-export function CartItem({ isOrder = false }: CartItemProps) {
+export function CartItem({ 
+  image, name, price, quantity, total, isOrder = false 
+}: CartItemProps) {
   return (
     <article className="flex items-center justify-between border-b border-Rose-100 pb-5">
-        <CartDetails isOrder={isOrder}/>
-        <CartActionBtn isOrder={isOrder}/>
+        <CartDetails 
+          isOrder={isOrder}
+          image={image}
+          name={name}
+          price={price}
+          quantity={quantity}
+          total={total}
+        />
+        <CartActionBtn total={total} isOrder={isOrder}/>
     </article>
   )
 }

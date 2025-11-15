@@ -1,11 +1,16 @@
+import { useAppSelector } from '@/store'
 import { CartItem } from '../CartItem'
 
 export function CartList() {
+  const cartItems = useAppSelector(state => state.cart.items)
+
   return (
     <div className='flex flex-col gap-3'>
-        <CartItem/>
-        <CartItem/>
-        <CartItem/>
+        {
+          cartItems.map(cart => (
+            <CartItem key={cart.name} {...cart}/>
+          ))
+        }
     </div>
   )
 }
