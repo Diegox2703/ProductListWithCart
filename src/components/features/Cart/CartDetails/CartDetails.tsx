@@ -4,7 +4,7 @@ import type { CartDetailsProps } from './cart-details.types'
 export function CartDetails({ name, price, quantity, image, total, isOrder }: CartDetailsProps) {
   return (
     <section className="flex gap-3">
-        { isOrder && <CartThumbnail image={image}/> }
+        { isOrder && <CartThumbnail thumbnail={image.thumbnail}/> }
         <section className="flex flex-col justify-between gap-2">
             <h1 className="text-Rose-900 text-sm">{ name }</h1>
             <section className="flex text-sm gap-4">

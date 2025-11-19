@@ -15,7 +15,7 @@ export function CartItem({
           quantity={quantity}
           total={total}
         />
-        <CartActionBtn total={total} isOrder={isOrder}/>
+        <CartActionBtn name={name} total={total} isOrder={isOrder}/>
     </article>
   )
 }

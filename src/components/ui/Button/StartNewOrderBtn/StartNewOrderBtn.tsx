@@ -1,8 +1,9 @@
 import { BaseButton } from '../BaseButton'
+import type { StartNewOrderBtnProps } from './start-new-orderbtn.types'
 
-export function StartNewOrderBtn() {
+export function StartNewOrderBtn({ resetOrder }: StartNewOrderBtnProps) {
   return (
-    <BaseButton>
+    <BaseButton onClick={resetOrder}>
         Start New Order
     </BaseButton>
   )

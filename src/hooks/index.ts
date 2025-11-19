@@ -1,1 +1,2 @@
-export { useDisableScroll } from './useDisableScroll'
+export * from './useDisableScroll'
+export * from './useTotal'

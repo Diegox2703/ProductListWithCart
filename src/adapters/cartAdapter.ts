@@ -1,4 +1,4 @@
-import type { Cart, Product } from "@/types";
+import type { Cart, Product } from '@/types'
 
 export const cartAdapter = (product: Product): Cart => ({
     name: product.name,
