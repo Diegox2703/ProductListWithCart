@@ -1,3 +1,5 @@
 import type { ProductImage } from "@/types";
 
-export interface ProductImageProps extends ProductImage {}
+export interface ProductImageProps extends ProductImage {
+    name: string
+}

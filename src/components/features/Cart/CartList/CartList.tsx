@@ -5,12 +5,12 @@ export function CartList() {
   const cartItems = useAppSelector(state => state.cart.items)
 
   return (
-    <div className='flex flex-col gap-3'>
+    <section className='flex flex-col gap-3 max-h-[231px] overflow-auto scroll-style pr-1'>
         {
           cartItems.map(cart => (
             <CartItem key={cart.name} {...cart}/>
           ))
         }
-    </div>
+    </section>
   )
 }

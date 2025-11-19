@@ -6,7 +6,7 @@ import type { ProductItemProps } from './product-item.types'
 export function ProductItem({ name, category, price, image }: ProductItemProps) {
   return (
     <article className="flex flex-col gap-5 relative">
-      <ProductImage image={image}/>
+      <ProductImage image={image} name={name}/>
       <ProductActionsBtns name={name}/>
       <ProductDetails 
         category={ category }
