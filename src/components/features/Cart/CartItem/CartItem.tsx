@@ -1,12 +1,13 @@
 import type { CartItemProps } from './cart-item.types'
 import { CartDetails } from '../CartDetails/CartDetails'
 import { CartActionBtn } from '../CartActionBtn/CartActionBtn'
+import { cartItemStyles } from './cart-item.styles'
 
 export function CartItem({ 
   image, name, price, quantity, total, isOrder = false 
 }: CartItemProps) {
   return (
-    <article className="flex items-center justify-between border-b border-Rose-100 pb-5">
+    <article className={cartItemStyles.container}>
         <CartDetails 
           isOrder={isOrder}
           image={image}

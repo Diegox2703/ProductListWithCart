@@ -1,11 +1,12 @@
 import { CarbonNeutralIcon } from '@/components/ui'
+import { cartInfoMessageStyles } from './cart-info-message.styles'
 
 export function CartInfoMessage() {
   return (
-    <section className="bg-Rose-50 rounded-lg flex items-center justify-center gap-1 p-5">
+    <section className={cartInfoMessageStyles.container}>
       <CarbonNeutralIcon/>
-      <p className="text-Rose-900 text-sm font-normal">
-        This is a <strong className="font-medium">carbon-neutral</strong> delivery
+      <p className={cartInfoMessageStyles.infoMessage}>
+        This is a <strong className={cartInfoMessageStyles.carbonNeutral}>carbon-neutral</strong> delivery
       </p>
     </section>
   )

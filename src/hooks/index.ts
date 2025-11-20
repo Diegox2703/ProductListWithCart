@@ -1,2 +1,3 @@
+export * from './useCart'
 export * from './useDisableScroll'
-export * from './useTotal'
+export * from './useOrderModal'

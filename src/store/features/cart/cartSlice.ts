@@ -1,7 +1,8 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import { PRODUCT } from '@/constants'
 import { cartAdapter } from '@/adapters'
-import type { CartSliceState, QuantityActions } from './cart-slice.types'
+import type { CartSliceState } from './cart-slice.types'
+import type { QuantityActions } from '@/types'
 
 const initialState: CartSliceState = {
     items: []

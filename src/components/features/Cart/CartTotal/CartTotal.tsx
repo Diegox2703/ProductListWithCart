@@ -1,12 +1,13 @@
-import { useTotal } from '@/hooks'
+import { useCart } from '@/hooks'
+import { cartTotalStyles } from './cart-total.styles'
 
 export function CartTotal() {
-  const { handleTotal } = useTotal()
+  const { handleTotal } = useCart()
 
   return (
-    <section className="text-Rose-900 flex items-center justify-between">
-        <p className="text-sm font-normal">Order Total</p>
-        <p className="text-xl font-bold">${handleTotal()}</p>
+    <section className={cartTotalStyles.container}>
+        <p className={cartTotalStyles.text}>Order Total</p>
+        <p className={cartTotalStyles.total}>${handleTotal()}</p>
     </section>
   )
 }

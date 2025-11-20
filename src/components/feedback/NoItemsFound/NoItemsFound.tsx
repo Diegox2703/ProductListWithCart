@@ -1,10 +1,11 @@
 import { EmptyCartIcon } from '@/components/ui'
+import { noItemsFoundStyles } from './no-items-found.styles'
 
 export function NoItemsFound() {
   return (
-    <article className="flex flex-col items-center justify-center gap-5 p-5">
+    <article className={noItemsFoundStyles.container}>
       <EmptyCartIcon/>
-      <h1 className="text-Rose-500 font-bold">Your added items will appear here</h1>
+      <h1 className={noItemsFoundStyles.text}>Your added items will appear here</h1>
     </article>
   )
 }

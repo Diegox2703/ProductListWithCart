@@ -2,17 +2,18 @@ import { ConfirmOrderBtn } from '@/components/ui'
 import { CartInfoMessage } from '../CartInfoMessage'
 import { CartList } from '../CartList'
 import { CartTotal } from '../CartTotal'
-import { toggleModal, useAppDispatch } from '@/store'
+import { cartSummaryStyles } from './cart-summary.styles'
+import { useOrderModal } from '@/hooks'
 
 export function CartSummary() {
-  const dispatch = useAppDispatch()
+  const { toggleModalFn } = useOrderModal()
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className={cartSummaryStyles.container}>
       <CartList/>
       <CartTotal/>
       <CartInfoMessage/>
-      <ConfirmOrderBtn openModal={() => dispatch(toggleModal())}/>
+      <ConfirmOrderBtn openModal={() => toggleModalFn()}/>
     </div>
   )
 }

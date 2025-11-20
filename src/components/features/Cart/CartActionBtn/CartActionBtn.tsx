@@ -1,17 +1,16 @@
 import { RemoveBtn } from '@/components/ui'
+import { useCart } from '@/hooks'
 import type { CartActionBtnProps } from './cart-action-btn.types'
-import { useAppDispatch } from '@/store'
-import { deleteCartItem } from '@/store/features'
 
 export function CartActionBtn({ isOrder, total, name }: CartActionBtnProps) {
-  const dispatch = useAppDispatch()
+  const { deleteCartItemFn } = useCart()
 
   return (
     <section>
         {
             isOrder 
             ? <span className="text-Rose-900">${ total.toFixed(2) }</span>
-            : <RemoveBtn removeFn={() => dispatch(deleteCartItem(name))}/>
+            : <RemoveBtn removeFn={() => deleteCartItemFn(name)}/>
         }
     </section>
   )

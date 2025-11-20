@@ -1,4 +1,5 @@
 import { OrderConfirmedIcon } from '@/components/ui'
+import { orderHeaderStyles } from './order-header.styles'
 
 export function OrderHeader() {
   return (
@@ -7,8 +8,8 @@ export function OrderHeader() {
             <OrderConfirmedIcon/>
         </section>
         <section>
-            <h1 className="text-Rose-900 text-3xl font-bold">Order Confirmed</h1>
-            <span className="text-sm text-Rose-400">We hope you enjoy your food</span>
+            <h1 className={orderHeaderStyles.title}>Order Confirmed</h1>
+            <span className={orderHeaderStyles.text}>We hope you enjoy your food</span>
         </section>
     </>
   )

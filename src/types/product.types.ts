@@ -19,3 +19,8 @@ export interface ImageSources {
     tablet: string
     desktop: string
 }
+
+export interface QuantityActions {
+    action: 'increment' | 'decrement'
+    name: string
+}

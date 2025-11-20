@@ -1,17 +1,18 @@
 import { CartThumbnail } from '../CartThumbnail'
+import { cartDetailsStyles } from './cart-details.styles'
 import type { CartDetailsProps } from './cart-details.types'
 
 export function CartDetails({ name, price, quantity, image, total, isOrder }: CartDetailsProps) {
   return (
-    <section className="flex gap-3">
+    <section className={cartDetailsStyles.container}>
         { isOrder && <CartThumbnail thumbnail={image.thumbnail}/> }
-        <section className="flex flex-col justify-between gap-2">
-            <h1 className="text-Rose-900 text-sm">{ name }</h1>
-            <section className="flex text-sm gap-4">
-                <p className="text-Red">x{ quantity }</p>
-                <div className="flex gap-2">
-                    <span className="text-Rose-400">@ ${ price.toFixed(2) }</span>
-                    { !isOrder && <span className="text-Rose-500">${ total.toFixed(2) }</span> }
+        <section className={cartDetailsStyles.details}>
+            <h1 className={cartDetailsStyles.name}>{ name }</h1>
+            <section className={cartDetailsStyles.amountSection}>
+                <p className={cartDetailsStyles.quantity}>x{ quantity }</p>
+                <div className={cartDetailsStyles.priceSummary}>
+                    <span className={cartDetailsStyles.price}>@ ${ price.toFixed(2) }</span>
+                    { !isOrder && <span className={cartDetailsStyles.total}>${ total.toFixed(2) }</span> }
                 </div>
             </section>
         </section>

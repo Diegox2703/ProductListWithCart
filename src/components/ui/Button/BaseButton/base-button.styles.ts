@@ -1,0 +1,1 @@
+export const baseButtonStyles = 'bg-Red text-white hover:bg-Red-800 p-3 rounded-4xl cursor-pointer'

@@ -2,10 +2,11 @@ import { ProductImage } from '../ProductImage'
 import { ProductDetails } from '../ProductDetails'
 import { ProductActionsBtns } from '../ProductActionBtns'
 import type { ProductItemProps } from './product-item.types'
+import { productItemStyles } from './product-item.styles'
 
 export function ProductItem({ name, category, price, image }: ProductItemProps) {
   return (
-    <article className="flex flex-col gap-5 relative">
+    <article className={productItemStyles.container}>
       <ProductImage image={image} name={name}/>
       <ProductActionsBtns name={name}/>
       <ProductDetails 

@@ -1,1 +1,0 @@
-export { OrderConfirmationModal } from './OrderConfirmationModal'

@@ -1,9 +1,10 @@
 import { CartTotal } from '@/components/features'
 import { OrderList } from '../OrderList'
+import { orderSummaryStyles } from './order-summary.styles'
 
 export function OrderSummary() {
   return (
-    <section className="flex flex-col gap-5 bg-Rose-50 rounded-lg p-6">
+    <section className={orderSummaryStyles.container}>
         <OrderList/>
         <CartTotal/>
     </section>

@@ -1,0 +1,1 @@
+export const quantitySelectorStyles = 'bg-Red text-Rose-50 px-3 py-2.5 flex justify-between items-center gap-2 rounded-4xl text-sm transition-colors w-40'

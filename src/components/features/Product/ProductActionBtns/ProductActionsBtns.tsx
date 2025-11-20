@@ -1,24 +1,22 @@
 import { ProductCartBtn, QuantitySelector } from '@/components/ui'
-import { createCartItem, useAppDispatch, useAppSelector } from '@/store'
 import type { ProductActionsBtnsProps } from './product-actions-btns.types'
-import { handleQuantity } from '@/store/features'
+import { productActionBtnsStyles } from './product-action-btns.styles'
+import { useCart } from '@/hooks'
 
 export function ProductActionsBtns({ name }: ProductActionsBtnsProps) {
-  const dispatch = useAppDispatch()
-  const cart = useAppSelector(state => state.cart)
-
-  const isProductInCart = cart.items.find(item => item.name === name)
+  const { createCartItemFn, handleQuantityFn, productInCart } = useCart()
+  const { isProductInCart, quantity } = productInCart(name)
 
   return (
-    <section className="absolute bottom-18 w-full flex justify-center">
+    <section className={productActionBtnsStyles.container}>
         {
-            isProductInCart
+            isProductInCart && quantity
             ? <QuantitySelector 
-                onDecrement={() => dispatch(handleQuantity({ action: 'decrement', name }))}
-                quantity={ isProductInCart.quantity }
-                onIncrement={() => dispatch(handleQuantity({ action: 'increment', name }))} 
+                onDecrement={() => handleQuantityFn({ action: 'decrement', name })}
+                quantity={ quantity }
+                onIncrement={() => handleQuantityFn({ action: 'increment', name })} 
               />
-            : <ProductCartBtn createCartBtn={() => dispatch(createCartItem(name))}/>
+            : <ProductCartBtn createCartBtn={() => createCartItemFn(name)}/>
         }
     </section>
   )
