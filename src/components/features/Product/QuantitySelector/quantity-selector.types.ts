@@ -1,4 +1,6 @@
+import type { CartQuantity, ProductId } from '@/types'
+
 export interface QuantitySelectorProps {
-    quantity: number
-    id: number
+    quantity: CartQuantity
+    id: ProductId
 }

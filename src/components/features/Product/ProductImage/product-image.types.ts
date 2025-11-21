@@ -1,5 +1,5 @@
-import type { ProductImage } from "@/types";
+import type { ProductId, ProductImage } from '@/types'
 
 export interface ProductImageProps extends ProductImage {
-    id: number
+    id: ProductId
 }

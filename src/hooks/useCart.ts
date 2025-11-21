@@ -1,4 +1,4 @@
-import type { QuantityActions } from '@/types'
+import type { ProductId, QuantityActions } from '@/types'
 import { useAppDispatch, useAppSelector } from '@/store'
 import { 
     createCartItem, 
@@ -12,11 +12,11 @@ export const useCart = () => {
     const cartItems = useAppSelector(store => store.cart.items)
     const dispatch = useAppDispatch()
 
-    const createCartItemFn = (id: number) => {
+    const createCartItemFn = (id: ProductId) => {
         dispatch(createCartItem(id))
     }
 
-    const deleteCartItemFn = (id: number) => {
+    const deleteCartItemFn = (id: ProductId) => {
         dispatch(deleteCartItem(id))
     }
 
@@ -46,7 +46,7 @@ export const useCart = () => {
         return total.toFixed(2)
     }
 
-    const productInCart = (id: number) => {
+    const productInCart = (id: ProductId) => {
         const isProductInCart = cartItems.some(item => item.id === id)
         const cart = cartItems.find(item => item.id === id)
         const quantity = cart?.quantity

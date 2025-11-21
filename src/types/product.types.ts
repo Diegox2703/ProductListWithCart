@@ -7,14 +7,18 @@ export interface Product {
 }
 
 export interface ProductItem extends ProductDetails, ProductImage {
-    id: number
+    id: ProductId
 }
+
+export type ProductDetails = Pick<Product, 'name' | 'category' | 'price'>
+
+export type ProductForCart = Pick<Product, 'id' | 'name' | 'price'>
+
+export type ProductId = Product['id']
 
 export type ProductImage = {
     image: Omit<ImageSources, 'thumbnail'>
 }
-
-export type ProductDetails = Pick<Product, 'name' | 'category' | 'price'>
 
 export interface ImageSources {
     thumbnail: string
@@ -25,5 +29,5 @@ export interface ImageSources {
 
 export interface QuantityActions {
     action: 'increment' | 'decrement'
-    id: number
+    id: ProductId
 }

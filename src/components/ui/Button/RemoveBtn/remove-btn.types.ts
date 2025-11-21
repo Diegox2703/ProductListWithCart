@@ -1,4 +1,6 @@
+import type { ProductId } from '@/types'
+
 export interface RemoveBtnProps {
-    onRemove: (id: number) => void
-    id: number
+    onRemove: (id: ProductId) => void
+    id: ProductId
 }

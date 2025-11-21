@@ -1,3 +1,3 @@
 export const orderSummaryStyles = {
-    container: 'flex flex-col gap-5 bg-Rose-50 rounded-lg p-6'
+    container: 'flex flex-col gap-5 bg-Rose-50 rounded-lg p-2 sm:p-6'
 }

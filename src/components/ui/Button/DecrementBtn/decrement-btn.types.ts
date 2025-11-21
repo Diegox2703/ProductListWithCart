@@ -1,6 +1,6 @@
-import type { QuantityActions } from "@/types";
+import type { ProductId, QuantityActions } from '@/types'
 
 export interface DecrementBtnProps {
     onDecrementQuantity: (action: QuantityActions) => void
-    id: number
+    id: ProductId
 }

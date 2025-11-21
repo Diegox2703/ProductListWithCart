@@ -1,3 +1,3 @@
 export const cartListStyles = {
-    container: 'flex flex-col gap-3 max-h-[231px] overflow-auto scroll-style pr-1'
+    container: 'flex flex-col gap-3 h-fit max-h-[231px] overflow-y-auto overflow-x-hidden primary-scrollbar pr-1'
 }

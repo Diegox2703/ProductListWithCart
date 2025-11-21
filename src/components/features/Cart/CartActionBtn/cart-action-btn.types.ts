@@ -1,5 +1,7 @@
+import type { CartTotal, ProductId } from "@/types"
+
 export interface CartActionBtnProps {
     isOrder: boolean
-    total: number
-    id: number
+    total: CartTotal
+    id: ProductId
 }

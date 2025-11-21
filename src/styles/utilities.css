@@ -1,0 +1,11 @@
+@layer utilities {
+    .primary-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-Red) var(--color-white);
+    }
+
+    .secondary-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-Red) var(--color-Rose-50);
+    }
+}

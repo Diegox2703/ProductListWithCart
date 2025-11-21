@@ -1,4 +1,6 @@
+import type { ProductId } from '@/types'
+
 export interface ProductCartBtnProps {
-    onCreateCartBtn: (id: number) => void
-    id: number
+    onCreateCartBtn: (id: ProductId) => void
+    id: ProductId
 }
