@@ -2,11 +2,11 @@ import { CartIcon } from '@/components/ui'
 import type { ProductCartBtnProps } from './product-cart-btn.types'
 import { productCartBtnStyles } from './product-cart-btn.styles'
 
-export function ProductCartBtn({ createCartBtn }: ProductCartBtnProps) {
+export function ProductCartBtn({ id, onCreateCartBtn }: ProductCartBtnProps) {
   return (
     <button 
       className={productCartBtnStyles}
-      onClick={createCartBtn}
+      onClick={() => onCreateCartBtn(id)}
     >
         <CartIcon/>
         Add to cart

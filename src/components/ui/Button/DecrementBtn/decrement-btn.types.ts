@@ -1,3 +1,6 @@
+import type { QuantityActions } from "@/types";
+
 export interface DecrementBtnProps {
-    decrementQuantity: () => void
+    onDecrementQuantity: (action: QuantityActions) => void
+    id: number
 }

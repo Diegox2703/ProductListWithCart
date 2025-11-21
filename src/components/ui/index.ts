@@ -9,7 +9,6 @@ export {
 
 export { 
     ProductCartBtn, 
-    QuantitySelector, 
     DecrementBtn, 
     IncrementBtn, 
     IconButton,

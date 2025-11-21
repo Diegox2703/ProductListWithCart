@@ -1,3 +1,4 @@
 export interface ProductCartBtnProps {
-    createCartBtn: () => void
+    onCreateCartBtn: (id: number) => void
+    id: number
 }

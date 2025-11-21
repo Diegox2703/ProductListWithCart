@@ -12,16 +12,16 @@ const cartSlice = createSlice({
     name: 'cart',
     initialState: initialState,
     reducers: {
-        createCartItem: (state, action: PayloadAction<string>) => {
-            const product = PRODUCT.find(product => product.name === action.payload)
+        createCartItem: (state, action: PayloadAction<number>) => {
+            const product = PRODUCT.find(product => product.id === action.payload)
             if (product) return {...state, items: [...state.items, cartAdapter(product)]}
         },
-        deleteCartItem: (state, action: PayloadAction<string>) => {
-            const newCart = state.items.filter(cart => cart.name !== action.payload)
+        deleteCartItem: (state, action: PayloadAction<number>) => {
+            const newCart = state.items.filter(cart => cart.id !== action.payload)
             return {...state, items: newCart}
         },
         handleQuantity: ( state, action: PayloadAction<QuantityActions>) => {
-            const cart = state.items.find(item => item.name === action.payload.name)
+            const cart = state.items.find(item => item.id === action.payload.id)
             if (cart) {
                 if (action.payload.action === 'increment') cart.quantity += 1
                 if (action.payload.action === 'decrement' && cart.quantity > 1) cart.quantity -= 1

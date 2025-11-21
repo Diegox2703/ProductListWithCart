@@ -1,5 +1,5 @@
 import type { ProductImage } from "@/types";
 
 export interface ProductImageProps extends ProductImage {
-    name: string
+    id: number
 }

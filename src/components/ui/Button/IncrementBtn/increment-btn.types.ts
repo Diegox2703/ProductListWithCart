@@ -1,3 +1,6 @@
+import type { QuantityActions } from "@/types";
+
 export interface IncrementBtnProps {
-    incrementQuantity: () => void
+    onIncrementQuantity: (action: QuantityActions) => void
+    id: number
 }

@@ -1,3 +1,3 @@
 export interface ProductActionsBtnsProps {
-    name: string
+    id: number
 }

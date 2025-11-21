@@ -13,7 +13,7 @@ export function CartSummary() {
       <CartList/>
       <CartTotal/>
       <CartInfoMessage/>
-      <ConfirmOrderBtn openModal={() => toggleModalFn()}/>
+      <ConfirmOrderBtn openModal={toggleModalFn}/>
     </div>
   )
 }

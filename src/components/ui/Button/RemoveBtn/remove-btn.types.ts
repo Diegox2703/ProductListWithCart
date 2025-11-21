@@ -1,3 +1,4 @@
 export interface RemoveBtnProps {
-    removeFn: () => void
+    onRemove: (id: number) => void
+    id: number
 }

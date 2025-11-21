@@ -2,9 +2,9 @@ import type { ProductImageProps } from "./product-image.types";
 import { imageContainer, productImageStyles } from "./product-image.styles";
 import { useCart } from "@/hooks";
 
-export function ProductImage({ image, name }: ProductImageProps) {
+export function ProductImage({ image, id }: ProductImageProps) {
   const { productInCart } = useCart()
-  const { isProductInCart } = productInCart(name)
+  const { isProductInCart } = productInCart(id)
 
   return (
     <section className={imageContainer({ isProductInCart })}>

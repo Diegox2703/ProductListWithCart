@@ -4,7 +4,7 @@ import { CartActionBtn } from '../CartActionBtn/CartActionBtn'
 import { cartItemStyles } from './cart-item.styles'
 
 export function CartItem({ 
-  image, name, price, quantity, total, isOrder = false 
+  id, image, name, price, quantity, total, isOrder = false 
 }: CartItemProps) {
   return (
     <article className={cartItemStyles.container}>
@@ -16,7 +16,7 @@ export function CartItem({
           quantity={quantity}
           total={total}
         />
-        <CartActionBtn name={name} total={total} isOrder={isOrder}/>
+        <CartActionBtn id={id} total={total} isOrder={isOrder}/>
     </article>
   )
 }

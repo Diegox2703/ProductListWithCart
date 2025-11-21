@@ -1,5 +1,5 @@
-import type { Cart } from '@/types'
+import type { CartDetails } from '@/types'
 
-export interface CartDetailsProps extends Cart {
+export interface CartDetailsProps extends CartDetails {
     isOrder: boolean
 }

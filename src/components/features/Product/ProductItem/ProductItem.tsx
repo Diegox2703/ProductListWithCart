@@ -4,11 +4,11 @@ import { ProductActionsBtns } from '../ProductActionBtns'
 import type { ProductItemProps } from './product-item.types'
 import { productItemStyles } from './product-item.styles'
 
-export function ProductItem({ name, category, price, image }: ProductItemProps) {
+export function ProductItem({ id, name, category, price, image }: ProductItemProps) {
   return (
     <article className={productItemStyles.container}>
-      <ProductImage image={image} name={name}/>
-      <ProductActionsBtns name={name}/>
+      <ProductImage image={image} id={id}/>
+      <ProductActionsBtns id={id}/>
       <ProductDetails 
         category={ category }
         name={ name }

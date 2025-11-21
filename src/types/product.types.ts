@@ -1,11 +1,14 @@
 export interface Product {
+    id: number
     name: string
     category: string
     price: number
     image: ImageSources
 }
 
-export interface ProductItem extends ProductDetails, ProductImage {}
+export interface ProductItem extends ProductDetails, ProductImage {
+    id: number
+}
 
 export type ProductImage = {
     image: Omit<ImageSources, 'thumbnail'>
@@ -22,5 +25,5 @@ export interface ImageSources {
 
 export interface QuantityActions {
     action: 'increment' | 'decrement'
-    name: string
+    id: number
 }

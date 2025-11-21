@@ -9,7 +9,7 @@ export function OrderList() {
     <div className={orderListStyles.container}>
         {
           cartItems.map(cart => (
-            <CartItem isOrder key={cart.name} {...cart}/>
+            <CartItem isOrder key={cart.id} {...cart}/>
           ))
         }
     </div>

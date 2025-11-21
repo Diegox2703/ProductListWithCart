@@ -12,12 +12,12 @@ export const useCart = () => {
     const cartItems = useAppSelector(store => store.cart.items)
     const dispatch = useAppDispatch()
 
-    const createCartItemFn = (name: string) => {
-        dispatch(createCartItem(name))
+    const createCartItemFn = (id: number) => {
+        dispatch(createCartItem(id))
     }
 
-    const deleteCartItemFn = (name: string) => {
-        dispatch(deleteCartItem(name))
+    const deleteCartItemFn = (id: number) => {
+        dispatch(deleteCartItem(id))
     }
 
     const handleQuantityFn = (action: QuantityActions) => {
@@ -46,9 +46,9 @@ export const useCart = () => {
         return total.toFixed(2)
     }
 
-    const productInCart = (name: string) => {
-        const isProductInCart = cartItems.some(item => item.name === name)
-        const cart = cartItems.find(item => item.name === name)
+    const productInCart = (id: number) => {
+        const isProductInCart = cartItems.some(item => item.id === id)
+        const cart = cartItems.find(item => item.id === id)
         const quantity = cart?.quantity
 
         return { isProductInCart, quantity }

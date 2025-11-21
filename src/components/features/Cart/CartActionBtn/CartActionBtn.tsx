@@ -2,7 +2,7 @@ import { RemoveBtn } from '@/components/ui'
 import { useCart } from '@/hooks'
 import type { CartActionBtnProps } from './cart-action-btn.types'
 
-export function CartActionBtn({ isOrder, total, name }: CartActionBtnProps) {
+export function CartActionBtn({ isOrder, total, id }: CartActionBtnProps) {
   const { deleteCartItemFn } = useCart()
 
   return (
@@ -10,7 +10,7 @@ export function CartActionBtn({ isOrder, total, name }: CartActionBtnProps) {
         {
             isOrder 
             ? <span className="text-Rose-900">${ total.toFixed(2) }</span>
-            : <RemoveBtn removeFn={() => deleteCartItemFn(name)}/>
+            : <RemoveBtn id={id} onRemove={deleteCartItemFn}/>
         }
     </section>
   )

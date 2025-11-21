@@ -9,7 +9,7 @@ export function CartList() {
     <section className={cartListStyles.container}>
         {
           cartItems.map(cart => (
-            <CartItem key={cart.name} {...cart}/>
+            <CartItem key={cart.id} {...cart}/>
           ))
         }
     </section>
